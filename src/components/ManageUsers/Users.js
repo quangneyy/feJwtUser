@@ -11,7 +11,7 @@ const Users = (props) => {
       history.push("/login");
     }
   }, []);
-  return <div>users component</div>;
+  return <div>users components</div>;
 };
 
 export default Users;
