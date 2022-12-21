@@ -51,12 +51,8 @@ const Login = (props) => {
         account: { groupWithRoles, email, username },
       };
 
-      sessionStorage.setItem("account", JSON.stringify(data));
       loginContext(data);
-
       history.push("/users");
-      // window.location.reload();
-      // redux
     }
 
     if (response && +response.EC !== 0) {
@@ -71,13 +67,6 @@ const Login = (props) => {
     }
   };
 
-  useEffect(() => {
-    let session = sessionStorage.getItem("account");
-    if (session) {
-      history.push("/");
-      window.location.reload();
-    }
-  }, []);
   return (
     <div className="login-container">
       <div className="container">
